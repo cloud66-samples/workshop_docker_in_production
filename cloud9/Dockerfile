@@ -2,7 +2,7 @@ FROM node:6.7.0
 
 # ------------------------------------------------------------------------------
 # Install Cloud9
-RUN git clone https://github.com/c9/core.git /cloud9
+RUN git clone https://github.com/cloud66-samples/c9_core_for_workshop.git /cloud9
 WORKDIR /cloud9
 RUN scripts/install-sdk.sh
 
