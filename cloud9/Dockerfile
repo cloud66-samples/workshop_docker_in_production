@@ -42,4 +42,4 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 EXPOSE 80
 ENV NODE_ENV production
 
-CMD node /cloud9/server.js --listen 0.0.0.0 --port 80 -w /workspace
+CMD node /cloud9/server.js --auth ${C9_USERNAME}:${C9_PASSWORD} --listen 0.0.0.0 --port 80 -w /workspace
