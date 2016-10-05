@@ -1,0 +1,15 @@
+---
+services:
+  cloud9:
+    git_url: http://github.com/cloud66-samples/workshop_docker_in_production.git
+    build_root: cloud9
+    git_branch: master
+    ports:
+    - 80:3000
+    volumes:
+    - "/mnt/workspace:/workspace"
+    - "/var/run/docker.sock:/var/run/docker.sock"
+databases:
+- mysql
+- rabbitmq
+- mongodb

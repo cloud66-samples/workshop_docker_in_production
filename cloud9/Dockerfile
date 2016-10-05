@@ -24,6 +24,16 @@ RUN apt-get -y update
 RUN apt-get install -y docker-engine
 
 # ------------------------------------------------------------------------------
+# Install Docker compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+RUN chmod +x /usr/local/bin/docker-compose
+
+# ------------------------------------------------------------------------------
+# Install Habitus
+
+
+
+# ------------------------------------------------------------------------------
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
