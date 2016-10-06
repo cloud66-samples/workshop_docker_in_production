@@ -16,4 +16,6 @@ ADD . $APPLICATION_DIR
 # package the project
 RUN mvn package
 
+# run the API
+EXPOSE 8080
 CMD java -jar target/gs-rest-service-0.1.0.jar 
