@@ -1,0 +1,17 @@
+#use the golang base image
+FROM golang:1.6
+MAINTAINER Daniel van Gils
+
+
+#switch to our app directory
+RUN mkdir -p /go/src/server
+WORKDIR /go/src/server
+
+#copy the source files
+ADD . /go/src/server
+
+ENV CGO_ENABLED=0 
+ENV GOOS=linux
+
+RUN go build -a -installsuffix cgo -o server
+CMD /go/src/server/server

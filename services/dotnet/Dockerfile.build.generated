@@ -1,0 +1,7 @@
+from microsoft/dotnet:1.0.0-preview2-sdk
+workdir /app
+copy project.json /app
+run dotnet restore
+copy . /app
+run dotnet publish -c release
+cmd dotnet run -c release

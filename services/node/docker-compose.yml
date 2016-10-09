@@ -1,0 +1,7 @@
+api:
+  dockerfile: Dockerfile
+  volumes:
+    - /mnt${PWD}:/app
+  build: .
+  ports:
+    - 3000:3000

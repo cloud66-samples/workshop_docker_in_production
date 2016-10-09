@@ -1,0 +1,12 @@
+#use the alpine base image
+FROM alpine:3.3
+MAINTAINER Daniel van Gils
+RUN mkdir -p /app
+WORKDIR /app
+
+#copy the binary 
+ADD ./server /app
+RUN chown daemon:daemon /app/server && chmod 700 /app/server
+
+USER daemon
+CMD /app/server

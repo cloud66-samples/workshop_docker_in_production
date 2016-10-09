@@ -22,6 +22,7 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 581
 RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list
 RUN apt-get -y update
 RUN apt-get install -y docker-engine
+RUN apt-get install -y apache2-utils
 
 # ------------------------------------------------------------------------------
 # Install Docker compose

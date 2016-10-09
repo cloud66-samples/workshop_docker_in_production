@@ -1,0 +1,7 @@
+api:
+  dockerfile: Dockerfile.build
+  volumes:
+    - /mnt${PWD}:/go/src/server
+  build: .
+  ports:
+    - 3000:8080

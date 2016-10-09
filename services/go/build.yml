@@ -1,0 +1,13 @@
+build:
+  version: 2016-03-14
+  steps:
+    builder:
+      name: builder/go
+      dockerfile: Dockerfile.build
+      artifacts:
+        - /go/src/server/server
+    runtime:
+      name: example/go
+      dockerfile: Dockerfile.production
+      depends_on:
+        - builder

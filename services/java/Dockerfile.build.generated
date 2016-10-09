@@ -1,0 +1,9 @@
+from maven:3-jdk-8-alpine
+env APPLICATION_DIR /app
+run mkdir $APPLICATION_DIR
+workdir $APPLICATION_DIR
+add pom.xml $APPLICATION_DIR
+run mvn dependency:resolve
+add . $APPLICATION_DIR
+run mvn package
+cmd java -jar target/gs-rest-service-0.1.0.jar

@@ -8,7 +8,7 @@ WORKDIR $APPLICATION_DIR
 ADD pom.xml $APPLICATION_DIR
 
 # get all the downloads out of the way
-RUN mvn verify clean --fail-never
+RUN mvn dependency:resolve
 
 # copy the source code
 ADD . $APPLICATION_DIR

@@ -1,0 +1,13 @@
+build:
+  version: 2016-03-14
+  steps:
+    builder:
+      name: builder/dotnet
+      dockerfile: Dockerfile.build
+      artifacts:
+        - /app/bin/release/netcoreapp1.0/publish/*:artifacts
+    runtime:
+      name: example/dotnet
+      dockerfile: Dockerfile.production
+      depends_on:
+        - builder
