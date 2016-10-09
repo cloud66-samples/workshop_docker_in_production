@@ -1,4 +1,5 @@
 FROM openjdk:8u92-jre-alpine
 WORKDIR /app
 ADD gs-rest-service-0.1.0.jar /app/app.jar
+EXPOSE 8080
 CMD java -jar app.jar
