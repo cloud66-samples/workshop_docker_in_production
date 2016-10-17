@@ -31,7 +31,7 @@ RUN chmod +x /usr/local/bin/docker-compose
 
 # ------------------------------------------------------------------------------
 # Install Habitus
-RUN curl -L https://github.com/cloud66/habitus/releases/download/v0.4.6/habitus_linux_amd64 > /usr/local/bin/habitus
+RUN curl -L https://github.com/cloud66/habitus/releases/download/v0.4.7/habitus_linux_amd64 > /usr/local/bin/habitus
 RUN chmod +x /usr/local/bin/habitus
 
 # ------------------------------------------------------------------------------
